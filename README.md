@@ -27,3 +27,22 @@ Add to .bashrc:
 >     PATH=$HOME/.cabal/bin:$PATH
 > fi
 
+# Run it, easy and quickly
+
+> ghc --make hello
+> ./hello
+
+or
+
+> ghci hello.hs
+> *Main> main
+
+# Run it, preferred: in a sandbox
+
+> cabal sandbox init
+> cabal install -j
+> .cabal-sandbox/bin/haskell-helloworld me
+
+
+
+hlint . --report
